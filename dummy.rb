@@ -4,3 +4,5 @@ puts "umar".reverse
 a=["aa","bb"]
 a<<"cc"
 puts a.join(" ")
+
+# hello world

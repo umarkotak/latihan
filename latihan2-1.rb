@@ -43,3 +43,7 @@ end
 # 1.upto(10) do |counter|
 # 	puts counter
 # end
+
+# 1.upto(rows) do |i|
+# 	line
+# end

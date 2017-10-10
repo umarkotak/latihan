@@ -6,9 +6,12 @@
 
 def checkerboard(size)
 
-	checker = 1
 	for i in 1..size do
+		
+		i % 2 == 0 ? checker=0 : checker=1
+
 		for j in 1..size do
+
 			if checker == 1 
 				print "[r]"
 				checker = 0
@@ -22,7 +25,23 @@ def checkerboard(size)
 	
 end
 
-checkerboard(4)
+
+def checkerboard2(size)
+
+	board=""
+	for i in 1..size*size
+		i.odd? ? board += "[r]" : board += "[b]"
+		board += "\n" if i%size == 0
+	end
+
+	puts board
+
+end
+
+def checkerboard3(size)
+	
+end
+
 # will return:
 # [r][b][r][b][r]
 # [b][r][b][r][b]
@@ -36,3 +55,5 @@ checkerboard(4)
 # will return
 # a
 # b
+
+checkerboard(5)

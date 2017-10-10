@@ -1,3 +1,5 @@
+# ABOUT LOOPING AND ITERATION
+
 # counter = 1
 # until counter>10
 # 	puts counter

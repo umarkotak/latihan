@@ -8,34 +8,43 @@ def mix_fruit(fruits)
 
   	buah = fruit.downcase
   	
+  	  # case buah
+  	  # when buah = "banana"
+  	  # 	price = price + 5
+
+  	  # when buah = "orange"
+  	  # 	price = price + 5
+
+  	  # when buah = "apple"
+  	  # 	price = price + 5
+
+  	  # when buah = "lemon"
+  	  # 	price = price + 5
+
+  	  # when buah = "grapes"
+  	  # 	price = price + 5
+
+  	  # when buah = "mango"
+  	  # 	price = price + 7
+  	  
+  	  # when 
+  	  # 	fruit = "avocado"
+  	  # 	price = price + 7
+
+  	  # when buah = "strawberry"
+  	  # 	price = price + 7
+  	  
+  	  # else
+  	  # 	price = price + 9
+  	  # end
+
   	  case buah
-  	  when buah = "banana"
-  	  	price = price + 5
-
-  	  when buah = "orange"
-  	  	price = price + 5
-
-  	  when buah = "apple"
-  	  	price = price + 5
-
-  	  when buah = "lemon"
-  	  	price = price + 5
-
-  	  when buah = "grapes"
-  	  	price = price + 5
-
-  	  when buah = "mango"
-  	  	price = price + 7
-  	  
-  	  when 
-  	  	fruit = "avocado"
-  	  	price = price + 7
-
-  	  when buah = "strawberry"
-  	  	price = price + 7
-  	  
+  	  when "banana", "orange", "apple", "lemon", "grapes"
+  	  	price += 5
+  	  when "avocado", "strawberry", "mango"
+  	  	price += 7
   	  else
-  	  	price = price + 9
+  	  	price += 9
   	  end
 
   	# if normal_fruit.include? buah
@@ -50,12 +59,12 @@ def mix_fruit(fruits)
   	# puts price
   end
 
-  bayar = price/fruits.size.round
+  # bayar = price/fruits.size.round
+
+  bayar = (price.to_f/fruits.size.to_f).round
 
   puts bayar
 
-  # your code here
-  # clue: use ".size" method to get the size of an array
 end
 
 mix_fruit(["banana","mango","avocado"]) # will resturn: 6

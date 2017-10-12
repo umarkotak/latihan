@@ -5,9 +5,12 @@
 				  # "ziarah" => 4 }
 
 
-# movie_ratings = Hash.new(3)
+# movie_ratings = Hash.new(3) 
 # new_movie = movie_ratings["pengabdi setan"]
+# movie_ratings["wew"] = "umar"
+# # deklarasi all key hasil value = 3
 # puts new_movie
+# puts movie_ratings["wew"]
 
 # movie_ratings = Hash["PS", 5, "TR 2", 5, "ziarah", 4]
 # puts movie_ratings
@@ -60,7 +63,7 @@
 
 # hsh.map {|k,v| exspression}
 
-mentor1 = { :name => "gio" , :age => 30}
-mentor2 = { name: "reymond", age: 25 }
-puts mentor1
-puts mentor2
+# mentor1 = { :name => "gio" , :age => 30}
+# mentor2 = { name: "reymond", age: 25 }
+# puts mentor1
+# puts mentor2

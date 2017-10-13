@@ -1,0 +1,3 @@
+Actually it's just the same.
+It's as if we're just writing string with proper newlines etc.
+Only, instead of printing it to a screen, we write it to a file.

@@ -16,17 +16,28 @@
 #    counter
 # end
 
-def deep_count(arr)
-	count = 0
+# def deep_count(arr)
+# 	count = 0
 
-	arr.each { |ele|
-		count += 1
-		if ele.class == Array
-			count += deep_count(ele) if ele.empty? == false
-		end
-	}
+# 	arr.each { |ele|
+# 		count += 1
+# 		if ele.class == Array
+# 			count += deep_count(ele) if ele.empty? == false
+# 		end
+# 	}
 
-	count	
+# 	count	
+# end
+
+def deep_count(a)
+  count = 0
+  a.each { |i|
+  count += 1
+  if i.class == Array
+    count += deep_count(i) if i.empty? != true
+  end
+  }
+  count
 end
 
 # def deep_count(a)

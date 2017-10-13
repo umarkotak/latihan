@@ -13,6 +13,12 @@ def word_count(teks)
 	p hsh.min_by {|k, v| v}
 end
 
+def count(array)
+  hsh = Hash.new(0)
+  x = array.map { |i| hsh[i] += 1 }
+  hsh
+end
+
 word_count("New: Returns a new, empty hash. If this hash is subsequently accessed by a key that does not correspond to a hash entry, the value returned depends on the style of new used to create the hash. In the first form, the access returns nil. If object is specified, this single object will be used for all default values. If a block is specified, it will be called with the hash object and the key, and should return the default value. The block has the responsibility to store the value in the hash if required.")
 
 # Return:

@@ -1,6 +1,10 @@
 def roman_numeral(angka)
 	
 	roman = ""
+	satuan = 0
+	puluhan = 0
+	ratusan = 0
+	ribuan = 0
 
 	dI = angka if angka <= 3
 	dI.times do 

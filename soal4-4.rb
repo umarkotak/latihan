@@ -26,8 +26,12 @@ def get_anagrams(sets)
   sets.map { |k, v| k.times { v.size.times { |i| arr += v[i] } } }
   x = arr.split("").permutation.to_a
   y = x.map { |i| i.join }
-  p y.uniq
+  y.uniq.sort
 end
+
+# def get_words(hash)
+#   hash.flat_map { |k, v| v * k }.sort.permutation.map(&:join).uniq
+# end
 
 # def get_anagrams(dats)
 #   arr = ""

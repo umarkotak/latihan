@@ -1,25 +1,25 @@
 def kaprekar(angka)
-	kuadrat = angka ** 2
-	kiri = 0
-	kanan = 0
-	kiri2 = 0
-	kanan2 = 0
-	arr = kuadrat.to_s.chars.map {|i| i.to_i}
-	
-	if arr.size.even?
-		kiri = arr[0...(arr.size/2)].join.to_i
-		kanan = arr[(arr.size/2)...arr.size].join.to_i
-	else
-		kiri = arr[0...(arr.size/2)].join.to_i
-		kanan = arr[(arr.size/2)...arr.size].join.to_i
+  kuadrat = angka ** 2
+  kiri = 0
+  kanan = 0
+  kiri2 = 0
+  kanan2 = 0
+  arr = kuadrat.to_s.chars.map {|i| i.to_i}
+  
+  if arr.size.even?
+    kiri = arr[0...(arr.size/2)].join.to_i
+    kanan = arr[(arr.size/2)...arr.size].join.to_i
+  else
+    kiri = arr[0...(arr.size/2)].join.to_i
+    kanan = arr[(arr.size/2)...arr.size].join.to_i
 
-		kiri2 = arr[0...(arr.size/2)+1].join.to_i
-		kanan2 = arr[(arr.size/2)+1...arr.size].join.to_i
-	end
+    kiri2 = arr[0...(arr.size/2)+1].join.to_i
+    kanan2 = arr[(arr.size/2)+1...arr.size].join.to_i
+  end
 
-	(kiri + kanan) == angka || (kiri2 + kanan2) == angka ? hasil = true : hasil = false
+  (kiri + kanan) == angka || (kiri2 + kanan2) == angka ? hasil = true : hasil = false
 
-	puts hasil
+  puts hasil
 end
 
 # 297 is also Kaprekar number since 

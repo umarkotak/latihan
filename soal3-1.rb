@@ -34,10 +34,10 @@ end
 #   num.join
 # end
 
-# insert_dash(454793)
-# puts
-# insert_dash(13)
-# puts
-# insert_dash(13579)
+insert_dash(454793)
+puts
+insert_dash(13)
+puts
+insert_dash(13579)
 
-# insert_dash2(135)
+insert_dash(135)

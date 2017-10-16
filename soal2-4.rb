@@ -39,7 +39,15 @@ def checkerboard2(size)
 end
 
 def checkerboard3(size)
-	
+	return nil if size.nil?
+  board=""
+  size = 0 if size <= 0 
+	for i in 1..size*size
+		i.odd? ? board += "[r]" : board += "[b]"
+		board += "\n" if i%size == 0
+	end
+
+	puts board
 end
 
 # will return:
@@ -56,4 +64,4 @@ end
 # a
 # b
 
-checkerboard(5)
+checkerboard3()

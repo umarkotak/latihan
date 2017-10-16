@@ -124,12 +124,74 @@ def num_to_words(num)
   puts words
 end 
 
+def num_to_words2(number)
+  number = number.to_i
+  word = ""
+  basic_words = { 0 => "nol",
+                  1 => "satu", 
+                  2 => "dua",
+                  3 => "tiga",
+                  4 => "empat",
+                  5 => "lima",
+                  6 => "enam",
+                  7 => "tujuh",
+                  8 => "delapan",
+                  9 => "sembilan",
+                  10 => "sepuluh",
+                  11 => "sebelas",
+                  100 => "seratus",
+                  1000 => "seribu",
+                  10000 => "sepuluh ribu"
+                }
+
+  if basic_words.has_key?(number)
+    word += basic_words[number]
+  else
+    unit = 10 ** (number.to_s.length - 1)
+    head = number / unit
+
+    if number < 20
+      word += basic_words[number % unit] + " belas"
+      number = unit
+    elsif number < 100
+      word += basic_words[head] + " puluh "
+    elsif number < 200
+      word += "seratus "
+    elsif number < 1000
+      word += basic_words[head] + " ratus "
+    elsif number < 10000
+      word += basic_words[head] + " ribu "
+    elsif number < 100000
+      word += num_to_words2(number / 1000) + " ribu "
+      unit = unit / 10
+    elsif number < 1000000
+      word += num_to_words2(number / 1000) + " ribu "
+      unit = unit / 100
+    elsif number < 10000000
+      word += num_to_words2(number / 1000000) + " juta "
+    elsif number < 100000000
+      word += num_to_words2(number / 1000000) + " juta "
+      unit = unit / 10
+
+    end
+
+    tail = number % unit
+
+    if tail != 0
+      word += num_to_words2(tail)
+    end
+  end
+
+  # puts word
+  word
+end
+
 masukan = gets.chomp
-num_to_words(masukan)
-num_to_words(0)      # return "nol"
-num_to_words(1)      # return "satu"
-num_to_words(10)     # return "sepuluh"
-num_to_words(11)     # return "sebelas"
-num_to_words(45)     # return "empat puluh lima"
-num_to_words(123)    # return "seratus dua puluh tiga"
-num_to_words(123400) # return "seratus dua puluh tiga ribu empat ratus"
+puts num_to_words2(masukan)
+# num_to_words(0)      # return "nol"
+# num_to_words(1)      # return "satu"
+# num_to_words(10)     # return "sepuluh"
+# num_to_words(11)     # return "sebelas"
+# num_to_words(45)     # return "empat puluh lima"
+# num_to_words(123)    # return "seratus dua puluh tiga"
+# num_to_words(123400) # return "seratus dua puluh tiga ribu empat ratus"

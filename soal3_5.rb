@@ -56,10 +56,10 @@ end
 # arr = [1,2,3]
 # print arr.reduce {|memo, elmt| memo += elmt}
 
-print deep_count([[]])
-print deep_count([1, 2, 3])
-print deep_count([1, 2, [3, 4, [5]]])
-print deep_count([[[[[[[[[]]]]]]]]])
+puts deep_count([[]])
+puts deep_count([1, 2, 3])
+puts deep_count([1, 2, [3, 4, [5]]])
+puts deep_count([[[[[[[[[]]]]]]]]])
 
 # coba =[1, 2]
 # p coba[0].empty?

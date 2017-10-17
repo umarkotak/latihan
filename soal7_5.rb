@@ -1,3 +1,4 @@
+# ini class find palindromes
 class FindPalindromes
   def find(m, n)
     counter = 1
@@ -8,7 +9,7 @@ class FindPalindromes
         # print pal+" "
         arr << pal.to_i
         counter += 1
-      end   
+      end
       m += 1
     end
     arr
